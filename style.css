@@ -1,0 +1,148 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+/* variables */
+:root {
+  /* Primary */
+  --soft-pink: hsl(333, 80%, 67%);
+  --very-dark-magenta: hsl(300, 43%, 22%);
+
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+}
+
+/* page reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'League Spartan', sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+button,
+button:focus,
+button:active {
+  border: none;
+  outline: none;
+}
+
+/* styles */
+main {
+  width: 100%;
+  min-height: 100vh;
+  padding: 6rem 3rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  max-width: 100%;
+}
+
+.reviews {
+  max-width: 100%;
+  margin-bottom: 3.5rem;
+
+  display: flex;
+  row-gap: 3.5rem;
+  flex-direction: column;
+}
+
+.text {
+  text-align: center;
+}
+
+.text h1 {
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 2rem;
+  
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: var(--very-dark-magenta);
+}
+
+.text p {
+  color: var(--dark-grayish-magenta);
+}
+
+.review {
+  display: flex;
+  row-gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+
+  border-radius: 0.5rem;
+  background-color: var(--light-grayish-magenta);
+}
+
+.review .stars img:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.review > p {
+  font-weight: bold;
+  color: var(--very-dark-magenta);
+}
+
+.testimonials .testimonial {
+  margin-bottom: 2rem;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  background-color: var(--very-dark-magenta);
+}
+
+.testimonials .testimonial .person {
+  margin-bottom: 2rem;
+  column-gap: 2rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.testimonials .testimonial .person img {
+  width: 4rem;
+  border-radius: 50%;
+}
+
+.testimonials .testimonial .person .details p:nth-of-type(1) {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: var(--white);
+}
+
+.testimonials .testimonial .person .details p:nth-of-type(2) {
+  color: var(--soft-pink);
+}
+
+.testimonials .testimonial > p {
+  font-size: 1.5rem;
+  color: var(--white);
+  line-height: 2.3rem;
+}
