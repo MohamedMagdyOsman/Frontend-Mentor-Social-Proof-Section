@@ -1,5 +1,5 @@
 /* fonts */
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
 
 /* variables */
 :root {
@@ -20,6 +20,7 @@
   margin: 0;
   padding: 0;
   font-weight: 500;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -28,7 +29,7 @@ html {
 }
 
 body {
-  font-family: 'League Spartan', sans-serif;
+  font-family: "League Spartan", sans-serif;
 }
 
 img {
@@ -52,8 +53,16 @@ main {
   min-height: 100vh;
   padding: 6rem 3rem;
 
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -65,8 +74,14 @@ section {
   max-width: 100%;
   margin-bottom: 3.5rem;
 
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   row-gap: 3.5rem;
+
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -78,7 +93,7 @@ section {
   margin-left: 1em;
   margin-right: 1em;
   margin-bottom: 2rem;
-  
+
   font-size: 3.5rem;
   font-weight: bold;
   color: var(--very-dark-magenta);
@@ -89,11 +104,20 @@ section {
 }
 
 .review {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   row-gap: 1rem;
+
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-  
+
   padding: 1rem 0;
   margin-bottom: 1rem;
 
@@ -119,10 +143,22 @@ section {
 
 .testimonials .testimonial .person {
   margin-bottom: 2rem;
+  
+  -webkit-column-gap: 2rem;
+  -moz-column-gap: 2rem;
   column-gap: 2rem;
 
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -150,11 +186,18 @@ section {
 /* media queries */
 @media (min-width: 768px) {
   .reviews {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
 
   .reviews .text {
+    -ms-flex-preferred-size: 45%;
     flex-basis: 45%;
     text-align: start;
   }
@@ -163,26 +206,36 @@ section {
     margin-left: 0;
     margin-right: 0;
   }
-  
+
   .reviews .companies_rate {
+    -ms-flex-preferred-size: 45%;
     flex-basis: 45%;
   }
 
   .companies_rate .review {
     max-width: 30rem;
   }
-  
+
   .companies_rate .review:nth-child(2) {
+    -webkit-transform: translateX(2rem);
+    -ms-transform: translateX(2rem);
     transform: translateX(2rem);
   }
 
   .companies_rate .review:nth-child(3) {
+    -webkit-transform: translateX(4rem);
+    -ms-transform: translateX(4rem);
     transform: translateX(4rem);
   }
 
   .testimonials {
+    display: -ms-grid;
     display: grid;
+
+    -webkit-column-gap: 2rem;
+    -moz-column-gap: 2rem;
     column-gap: 2rem;
+
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   }
 }
@@ -191,39 +244,53 @@ section {
   .reviews {
     margin-bottom: 6rem;
   }
-  
+
   .text h1 {
     font-size: 4.5rem;
     max-width: 30rem;
   }
-  
+
   .text p {
     max-width: 40rem;
   }
-  
+
   .companies_rate .review {
     max-width: 35rem;
     margin-bottom: 2rem;
-    
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
   }
 
   .companies_rate .review:nth-child(2) {
+    -webkit-transform: translateX(4rem);
+    -ms-transform: translateX(4rem);
     transform: translateX(4rem);
   }
 
   .companies_rate .review:nth-child(3) {
+    -webkit-transform: translateX(8rem);
+    -ms-transform: translateX(8rem);
     transform: translateX(8rem);
   }
 }
 
 @media (min-width: 1020px) {
   .testimonials .testimonial:nth-child(2) {
+    -webkit-transform: translateY(2rem);
+    -ms-transform: translateY(2rem);
     transform: translateY(2rem);
   }
 
   .testimonials .testimonial:nth-child(3) {
+    -webkit-transform: translateY(4rem);
+    -ms-transform: translateY(4rem);
     transform: translateY(4rem);
   }
 }
