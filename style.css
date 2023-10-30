@@ -146,3 +146,84 @@ section {
   color: var(--white);
   line-height: 2.3rem;
 }
+
+/* media queries */
+@media (min-width: 768px) {
+  .reviews {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .reviews .text {
+    flex-basis: 45%;
+    text-align: start;
+  }
+
+  .text h1 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .reviews .companies_rate {
+    flex-basis: 45%;
+  }
+
+  .companies_rate .review {
+    max-width: 30rem;
+  }
+  
+  .companies_rate .review:nth-child(2) {
+    transform: translateX(2rem);
+  }
+
+  .companies_rate .review:nth-child(3) {
+    transform: translateX(4rem);
+  }
+
+  .testimonials {
+    display: grid;
+    column-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  }
+}
+
+@media (min-width: 992px) {
+  .reviews {
+    margin-bottom: 6rem;
+  }
+  
+  .text h1 {
+    font-size: 4.5rem;
+    max-width: 30rem;
+  }
+  
+  .text p {
+    max-width: 40rem;
+  }
+  
+  .companies_rate .review {
+    max-width: 35rem;
+    margin-bottom: 2rem;
+    
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .companies_rate .review:nth-child(2) {
+    transform: translateX(4rem);
+  }
+
+  .companies_rate .review:nth-child(3) {
+    transform: translateX(8rem);
+  }
+}
+
+@media (min-width: 1020px) {
+  .testimonials .testimonial:nth-child(2) {
+    transform: translateY(2rem);
+  }
+
+  .testimonials .testimonial:nth-child(3) {
+    transform: translateY(4rem);
+  }
+}
